@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django Hello World Example</title>
-</head>
-<body>
-<h2>
-    Hello Django! :)
-</h2>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Django Hello World Example</title>
+    </head>
+
+    <header>
+        <a href="{% url 'index' %}">Home</a> | <a href="{% url 'api' %}">API</a>
+    </header>
+
+    <body>
+        <h2>
+            Hello Django! :)
+        </h2>
+    </body>
 </html>

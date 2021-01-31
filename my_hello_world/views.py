@@ -8,12 +8,12 @@ def index_page(request):
     # Return the index file to client.
     return render(request, 'index.html')
 
-def api_page(request):
-    roster = get_roster('BOS', 2008)
-    rosterHTML = roster.to_html()
-
-    text_file = open("templates/api.html", "w")
-    text_file.write(rosterHTML)
-    text_file.close()
-
-    return render(request, 'api.html')
+# def api_page(request):
+#     roster = get_roster('BOS', 2008)
+#     rosterHTML = roster.to_html()
+#
+#     text_file = open("templates/api.html", "w")
+#     text_file.write(rosterHTML)
+#     text_file.close()
+#
+#     return render(request, 'api.html')
