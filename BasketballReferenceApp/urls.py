@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # when client request http://127.0.0.1:8000/index/, the project will find the mapped process method in my_hello_world app's urls.py file.
+    path('index/', include('my_hello_world.urls')),
+    path('api/', include('my_hello_world.urls'))
 ]
