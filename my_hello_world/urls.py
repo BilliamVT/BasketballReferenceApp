@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     # When user request home page http://localhost:8000/my_hello_world, it will invoke the home function defined in views.py.
     path('', views.index_page, name='index'),
+    path('api/', views.api_page, name='api'),
 ]
